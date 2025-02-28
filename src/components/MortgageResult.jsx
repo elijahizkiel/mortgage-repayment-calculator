@@ -2,7 +2,7 @@ import assets from '../assets/assets.js'
 
 export default function MortgageResult({ resultCalculated, repayment }){
     return (
-        <div className="mortgage-result">
+        <div className={resultCalculated?"mortgage-result resulted":"mortgage-result"}>
             {!resultCalculated && <img src={assets.illustrationEmpty} alt="calcs and dollars" />}
             <div>
                 <h2 className="title"> {resultCalculated?"Your results":"Results shown here"}</h2>
@@ -14,10 +14,10 @@ export default function MortgageResult({ resultCalculated, repayment }){
                 </p>
                 <div className="result-box">
                     <p> Your monthly repayments</p>
-                    <p className="monthly-repayment">{repayment.monthly}</p>
-                    <hr />
+                    <p className="monthly-repayment">&pound;{repayment.monthly}</p>
+                    <span className='hr-rule'></span>
                     <p>Total you&apos;ll repay over the term</p>
-                    <p>{repayment.total}</p>
+                    <p className='total-repayment'>&pound;{repayment.total}</p>
                 </div>
                 </>
                 :<p className="intruction-primary" >

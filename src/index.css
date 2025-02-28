@@ -1,0 +1,189 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate-100: hsl(202, 86%, 94%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 55%, 16%);
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
+  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--plus-jakarta-sans);
+  font-size: 0.8rem/1.5;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--slate-100);
+}
+.app {
+  height:70vh;
+  display: grid;
+  grid-template-columns: repeat(2, 35vw);
+  background-color: var(--white);
+  border-radius: 10px;
+}
+.mortgage-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--slate-900);
+  border-radius: 0 10px 10px 50px;
+  padding: 2rem;
+  text-align: center;
+}
+.mortgage-result.resulted {
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.mortgage-result img {
+    max-width: 50%;
+    max-height: 50%;
+}
+.mortgage-result .title {
+  margin: 0.3rem;
+  color: var(--white);
+  font-family: var(--plus-jakarta-sans);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.mortgage-result p {
+  color: var(--slate-500);
+  font-family: var(--plus-jakarta-sans);
+  font-size: 0.8rem;
+}
+.result-box {
+    border-top:5px solid var(--lime);
+    border-radius: 10px;
+    padding:1.5rem;
+    margin:1.5rem 0;
+}
+p.monthly-repayment {
+    color:var(--lime);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin:1rem 0;
+}
+p.total-repayment {
+    font-size: 1.3rem;
+    color:var(--white);
+    font-weight: 700;
+}
+.hr-rule {
+    height: 1px;
+  background-color: var(--slate-500);  
+  margin:1rem 0;
+  display:block;
+}
+/* styling the mortgage form */
+.form-add-mortgage-data {
+  padding: 1.5rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.header .title {
+  color: var(--slate-900);
+  font: normal 700 1.2rem/1.5 var(--plus-jakarta-sans);
+}
+.reset-btn {
+  border: none;
+  text-decoration-color: var(--slate-300);
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  background-color: var(--white);
+  color: var(--slate-300);
+  font-family: var(--plus-jakarta-sans);
+  font-size: 0.8rem;
+}
+.result-type,
+.term-rate,
+.mortgage-amount-box {
+  margin: 0.8rem 0;
+}
+.term-rate {
+  display: grid;
+  column-gap: 10%;
+  grid-template-columns: repeat(2, 45%);
+  font-family: var(--plus-jakarta-sans);
+}
+input {
+    outline:none;
+  border: none;
+  font-size: 1rem;
+  color:var(--slate-900);
+}
+.mortgage-term input,
+.rate input {
+  width: 100%;
+  height: 100%;
+}
+.inputs {
+  margin: 0.5rem 0;
+  border: 1px solid var(--slate-300);
+  height: 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.unit {
+  color:var(--slate-700);
+  background-color: var(--slate-100);
+  height: 100%;
+  font-size: 1rem;
+  padding: 0.1rem 0.4rem;
+}
+
+.interest-only,
+.repayment {
+  display: flex;
+}
+.radio.type {
+  appearance: none;
+  width: 0.9rem;
+  height:0.9rem;
+  margin: 0 0.5rem;
+  border: 2px solid var(--slate-300);
+  border-radius: 50%;
+}
+.radio.type:checked{
+ outline:1px solid var(--lime) ;
+ border: 2px solid var(--white);
+ background-color: var(--lime);
+}
+.type-label {
+  display: inline-block;
+  margin: 0.3rem 0;
+  font: normal 700 0.9rem var(--plus-jakarta-sans);
+}
+.repay-btn {
+  width:60%;
+  background-color: var(--lime);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 15px;
+  margin-left: 2rem;
+  border: none;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
