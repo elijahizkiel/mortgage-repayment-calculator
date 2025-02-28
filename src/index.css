@@ -28,7 +28,7 @@ body {
   background-color: var(--slate-100);
 }
 .app {
-  height:70vh;
+  height:max(70vh,fit-content);
   display: grid;
   grid-template-columns: repeat(2, 35vw);
   background-color: var(--white);
@@ -143,6 +143,13 @@ input {
   align-items: center;
   overflow: hidden;
 }
+.inputs:hover {
+    border-width: 1.2px;
+    border-color: var(--slate-900);
+}
+.inputs.result-type:hover {
+    border-color: var(--lime);
+}
 .unit {
   color:var(--slate-700);
   background-color: var(--slate-100);
@@ -186,4 +193,20 @@ input {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.repay-btn:hover{
+    background-color: hsl(61, 70%, 65%);
+    color:hsl(200, 26%, 30%)
+}
+@media (max-width:650px){
+    .app{
+        position: absolute;
+        top:0;
+        left:0;
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content;
+    }
+    .mortgage-result {
+        border-radius: 0px;
+    }
 }
